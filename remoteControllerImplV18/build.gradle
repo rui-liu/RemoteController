@@ -1,0 +1,22 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 18
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 18
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    dependencies {
+        compile project(':remoteController:remoteControllerSharedCode')
+        provided project(':remoteController:remoteControllerImplV18:iRemoteControlDisplayV18')
+    }
+}

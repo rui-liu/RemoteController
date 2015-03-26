@@ -1,0 +1,26 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    compile project(':remoteController:remoteControllerSharedCode')
+    compile project(':remoteController:remoteControllerImplV14')
+    compile project(':remoteController:remoteControllerImplV18')
+    compile project(':remoteController:remoteControllerImplV19')
+    compile project(':remoteController:remoteControllerImplV21')
+    compile 'com.android.support:support-v4:19.+'
+}
